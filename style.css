@@ -85,14 +85,15 @@ body {
     background-color: white;
     cursor: pointer;
     border-radius: 50%;
-    transition: top 1s ease, left 1s ease;
+    transition: top 1s ease, left 1s ease, outline 150ms ease-out;
+    outline: 0 solid white;
 }
 
 .horizontal:hover,
 .horizontal:focus-visible,
 .vertical:hover,
 .vertical:focus-visible {
-    transform: scale(1.1);
+    outline: 5px solid white;
 }
 
 #top-slide,
