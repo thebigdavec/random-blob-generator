@@ -6,9 +6,29 @@
 
 body {
     background-color: #121212;
+    color: whitesmoke;
     min-height: 100vh;
     display: grid;
-    place-items: center;
+    justify-content: center;
+    align-content: center;
+    font-family: sans-serif;
+}
+
+.sharpness-container {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    justify-items: center;
+    background-color: black;
+}
+
+.sharpness-slider {
+    display: grid;
+    justify-items: center;
+}
+
+.sharpness-slider label {
+    text-transform: uppercase;
 }
 
 .blob-container {

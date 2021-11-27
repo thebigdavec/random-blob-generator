@@ -4,9 +4,15 @@ const topSlide = document.getElementById('top-slide')
 const bottomSlide = document.getElementById('bottom-slide')
 const leftSlide = document.getElementById('left-slide')
 const rightSlide = document.getElementById('right-slide')
-
 const makeBlobButton = document.getElementById('make-blob-button')
-let maxSharpness = 0
+const sharpnessSlider = document.getElementById('sharpness-slider')
+const sharpnessValueText = document.getElementById('sharpness-value-text')
+let maxSharpness = (100 - sharpnessSlider.value) / 2
+
+sharpnessSlider.oninput = function () {
+  maxSharpness = (100 - sharpnessSlider.value) / 2
+  sharpnessValueText.innerText = `${sharpnessSlider.value}%`
+}
 
 makeBlobButton.addEventListener('click', makeBlob)
 
