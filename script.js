@@ -6,7 +6,7 @@ const leftSlide = document.getElementById('left-slide')
 const rightSlide = document.getElementById('right-slide')
 
 const makeBlobButton = document.getElementById('make-blob-button')
-let maxSharpness = 20
+let maxSharpness = 0
 
 makeBlobButton.addEventListener('click', makeBlob)
 
