@@ -18,15 +18,23 @@
     </div>
     <div class="blob-container">
         <div class="corner"></div>
-        <div class="horizontal" id="top-slide"></div>
+
+        <input type="range" min="0" max="100" value="5" id="top-slide" class="horizontal">
+
         <div class="corner"></div>
-        <div class="vertical" id="left-slide"></div>
+
+        <input type="range" min="0" max="100" value="95" id="left-slide" orient="vertical" class="vertical">
+
         <div id="the-blob">
             <button id="make-blob-button">Generate Blob</button>
         </div>
-        <div class="vertical" id="right-slide"></div>
+
+        <input type="range" min="0" max="100" value="5" id="right-slide" orient="vertical" class="vertical">
+
         <div class="corner"></div>
-        <div class="horizontal" id="bottom-slide"></div>
+
+        <input type="range" min="0" max="100" value="95" id="bottom-slide" class="horizonatl">
+
         <div class="corner"></div>
     </div>
     <script src="script.js"></script>

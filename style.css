@@ -33,7 +33,7 @@ body {
 
 .blob-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, auto);
     justify-content: center;
     gap: 5px;
     background-color: black;
@@ -50,7 +50,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transition: border-radius 1s ease;
+    transition: border-radius 50ms ease;
 }
 
 #the-blob button {
@@ -60,7 +60,7 @@ body {
     border-radius: 50%;
     padding: 2rem;
     box-shadow: 0 0 0 #0003;
-    transition: transform 50ms ease-out, box-shadow 50ms ease-out, border-radius 1s ease;
+    transition: transform 50ms ease-out, box-shadow 50ms ease-out, border-radius 50ms ease;
 }
 
 #the-blob button:hover,
@@ -75,55 +75,29 @@ body {
 }
 
 .corner {
+    /* background-color: orange; */
+}
+
+.blob-container input[type='range'] {
+    -webkit-appearance: none;
     background-color: #242424;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
 }
 
-.corner:nth-of-type(1),
-.corner:nth-of-type(7) {
-    border-right: 1px solid #999;
+.blob-container input[type='range'].vertical {
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    height: min-content;
+    width: 600%;
 }
 
-.corner:nth-of-type(1),
-.corner:nth-of-type(3) {
-    border-bottom: 1px solid #999;
-}
-
-.corner:nth-of-type(3),
-.corner:nth-of-type(9) {
-    border-left: 1px solid #999;
-}
-
-.corner:nth-of-type(7),
-.corner:nth-of-type(9) {
-    border-top: 1px solid #999;
-}
-
-.horizontal,
-.vertical {
-    width: 1rem;
-    aspect-ratio: 1;
+.blob-container input[type='range']::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
     background-color: white;
-    cursor: pointer;
     border-radius: 50%;
-    transition: top 1s ease, left 1s ease, outline 150ms ease-out;
-    outline: 0 solid white;
-}
-
-.horizontal:hover,
-.horizontal:focus-visible,
-.vertical:hover,
-.vertical:focus-visible {
-    outline: 5px solid white;
-}
-
-#top-slide,
-#bottom-slide {
-    position: relative;
-    left: 50%;
-}
-
-#left-slide,
-#right-slide {
-    position: relative;
-    top: 50%;
+    box-shadow: 0 0 0 #0003;
 }
