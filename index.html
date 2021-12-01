@@ -17,25 +17,41 @@
         </div>
     </div>
     <div class="blob-container">
-        <div class="corner"></div>
+        <div class="corner" onclick="toCorner(0,0)"></div>
 
-        <input type="range" min="0" max="100" value="5" id="top-slide" class="horizontal">
+        <div id="top-slide" class="h-slide">
+            <div class="slide-limit">
+            </div>
+            <div class="slide-handle"></div>
+        </div>
 
-        <div class="corner"></div>
+        <div class="corner" onclick="toCorner(1,0)"></div>
 
-        <input type="range" min="0" max="100" value="95" id="left-slide" orient="vertical" class="vertical">
+        <div id="left-slide" class="v-slide">
+            <div class="slide-limit">
+            </div>
+            <div class="slide-handle"></div>
+        </div>
 
         <div id="the-blob">
             <button id="make-blob-button">Generate Blob</button>
         </div>
 
-        <input type="range" min="0" max="100" value="5" id="right-slide" orient="vertical" class="vertical">
+        <div id="right-slide" class="v-slide">
+            <div class="slide-limit">
+            </div>
+            <div class="slide-handle"></div>
+        </div>
 
-        <div class="corner"></div>
+        <div class="corner" onclick="toCorner(0,1)"></div>
 
-        <input type="range" min="0" max="100" value="95" id="bottom-slide" class="horizonatl">
+        <div id="bottom-slide" class="h-slide">
+            <div class="slide-limit">
+            </div>
+            <div class="slide-handle"></div>
+        </div>
 
-        <div class="corner"></div>
+        <div class="corner" onclick="toCorner(1,1)"></div>
     </div>
     <script src="script.js"></script>
 </body>

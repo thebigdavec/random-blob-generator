@@ -35,14 +35,13 @@ body {
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
-    gap: 5px;
+    gap: 1rem;
     background-color: black;
-    border: 1px solid #242424;
+    padding: 1rem;
 }
 
 #the-blob {
     width: min(70vw, 70vh);
-    padding: 100px;
     max-width: 800px;
     aspect-ratio: 1;
     background-color: palevioletred;
@@ -75,7 +74,80 @@ body {
 }
 
 .corner {
-    /* background-color: orange; */
+    cursor: pointer;
+    background-color: #242424;
+    border-radius: 50%;
+    outline: 0 solid #242424;
+    transition: background-color 150ms ease, outline 150ms ease;
+}
+
+.corner:hover {
+    background-color: whitesmoke;
+    outline-width: 0.25rem;
+    outline-color: whitesmoke;
+}
+
+.h-slide,
+.v-slide {
+    position: relative;
+    background-color: #242424;
+}
+
+.h-slide {
+    height: 1rem;
+}
+
+.v-slide {
+    width: 1rem;
+}
+
+
+/* Slider Boundaries */
+
+.h-slide .slide-limit {
+    width: 75%;
+    height: 0.75rem;
+}
+
+.v-slide .slide-limit {
+    width: 0.75rem;
+    height: 75%;
+}
+
+.slide-limit {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #141414;
+    box-shadow: 2px 2px 2px black inset, -2px -2px 2px #fff3 inset;
+    transition: background-color 150ms ease;
+}
+
+.slide-limit:hover {
+    background-color: #444;
+}
+
+
+/* Slider Handles */
+
+.slide-handle {
+    cursor: pointer;
+    position: absolute;
+    width: 1.2rem;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    outline: 0 solid white;
+    transition: outline 150ms ease, top 150ms ease, left 150ms ease;
+}
+
+.slide-handle:hover {
+    outline-width: 0.25rem;
 }
 
 .blob-container input[type='range'] {
