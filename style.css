@@ -41,15 +41,31 @@ body {
 }
 
 #the-blob {
+    position: relative;
     width: min(70vw, 70vh);
     max-width: 800px;
     aspect-ratio: 1;
-    background-color: palevioletred;
+    background: radial-gradient( circle at 30% 30%, #f5dff2, #ba59af 20%, #88025e 60%);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     transition: border-radius 50ms ease;
+    box-shadow: -20px -20px 50px #460230 inset, 20px 20px 50px #f5dff230 inset;
+    overflow: hidden;
+}
+
+#the-blob::after {
+    position: absolute;
+    content: '';
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    background-color: transparent;
+    box-shadow: -8px -8px 12px #fff3;
+    border-radius: inherit;
+    user-select: none;
 }
 
 #the-blob button {
@@ -60,6 +76,7 @@ body {
     padding: 2rem;
     box-shadow: 0 0 0 #0003;
     transition: transform 50ms ease-out, box-shadow 50ms ease-out, border-radius 50ms ease;
+    z-index: 2;
 }
 
 #the-blob button:hover,
